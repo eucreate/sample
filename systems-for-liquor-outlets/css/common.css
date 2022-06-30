@@ -1,0 +1,35 @@
+.btn-menu-primary {
+  display: block;
+  color: black;
+  margin-bottom: 0.875em;
+  padding: 0.75em;
+  background-color: #dddddd;
+  border-radius: 5px;
+  font-size: 1.125em;
+  text-decoration: none;
+  text-align: center;
+}
+
+.min-w-300px {
+  min-width: 300px;
+}
+
+.min-w-410px {
+  min-width: 410px;
+}
+
+.min-w-430px {
+  min-width: 430px;
+}
+
+.min-w-600px {
+  min-width: 600px;
+}
+
+.min-w-1138px {
+  min-width: 1138px;
+}
+
+.mw-400px {
+  max-width: 400px;
+}

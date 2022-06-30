@@ -1,0 +1,22 @@
+nav#sidebar.col-md-3.col-lg-2.d-md-block.bg-light.sidebar
+  section
+    h1.fs-3.pt-2 メインメニュー
+    ul.list-unstyled
+      li
+        a.btn.btn-menu-primary(href="/") 売上管理
+        if page === "sales management"
+          ul.mb-3
+            li: a(href="/") 売上伝票入力
+            li: a(href="/") 売上伝票履歴参照
+      li: a.btn.btn-menu-primary(href="billing_management.html") 請求管理
+      li
+        a.btn.btn-menu-primary(href="receiving_management_regist.html") 入荷管理
+        if page === "receiving management"
+          ul.mb-3
+            li: a(href="receiving_management_regist.html") 入荷登録
+            li: a(href="receiving_history.html") 入荷履歴
+      li: a.btn.btn-menu-primary(href="/") 見積管理
+      li: a.btn.btn-menu-primary(href="/") 販売分析
+      li: a.btn.btn-menu-primary(href="/") 在庫管理
+      li: a.btn.btn-menu-primary(href="/") マスタ管理
+      li: a.btn.btn-menu-primary(href="/") 設定

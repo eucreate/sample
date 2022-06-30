@@ -1,0 +1,68 @@
+extends _layout
+
+block append config
+  - var page = "receiving management"
+
+block append head
+
+block content
+  p.text-end 担当者：A
+  h1.mb-4 入荷登録
+  form.mb-4
+    .row.align-items-center.g-3
+      .col-auto
+        input.form-control(type="file")
+      .col-auto
+        button.btn.btn-primary(type="submit") CSVアップロード
+  h2 入荷商品
+  .table-responsive
+    table.table.min-w-1138px
+      tbody
+        tr
+          td
+            input.form-control(type="text", placeholder="JANコード")
+          td
+            input.form-control(type="text", placeholder="商品名")
+          td
+            select.form-select
+              option 入荷区分
+              option 通常
+              option 寄贈
+              option 景品
+              option 特別割引
+          td
+            p.mt-2 度数
+          td
+            p.mt-2 容量
+          td
+            input.form-control(type="text", placeholder="数量")
+          td
+            button.btn.btn-dark(type="submit") 削除
+        - for (var i = 0; i < 6; i++)
+          tr
+            td
+              input.form-control(type="text", placeholder="JANコード")
+            td
+              input.form-control(type="text", placeholder="商品名")
+            td
+              select.form-select
+                option 入荷区分
+                option 通常
+                option 寄贈
+                option 景品
+                option 特別割引
+            td
+              p.mt-2 度数
+            td
+              p.mt-2 容量
+            td
+              input.form-control(type="text", placeholder="数量")
+            td
+              button.btn.btn-dark(type="submit") 削除
+  form
+    .d-flex.justify-content-end
+      .row.align-items-center
+        .col-auto
+          input.form-control(type="text", placeholder="仕入先入力")
+        .col-auto
+          button.btn.btn-primary(type="submit") 入荷確定

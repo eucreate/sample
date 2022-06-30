@@ -1,0 +1,58 @@
+extends _layout
+
+block append config
+  - var page = "receiving management"
+
+block append head
+
+block content
+  p.text-end 担当者：A
+  h1.mb-4 入荷明細
+  div
+    p.d-inline-flex 入荷処理番号：
+    p.d-inline-flex 11111111
+    p.d-inline-flex.ms-3 入荷日付：
+    p.d-inline-flex 2022/6/1 10:35
+  p.d-inline-flex 入荷担当：
+  p.d-inline-flex 担当者A
+  .table-responsive
+    table.table.min-w-600px.align-middle
+      thead
+        tr
+          th JAN
+          th 商品名
+          th 入荷区分
+          th 度数
+          th 容量
+          th 数量
+      tbody
+        tr
+          td 123456789123
+          td 商品名A
+          td
+            select.form-select
+              option 通常
+              option 寄贈
+              option 景品
+              option 特別割引
+          td 15
+          td 350
+          td 11
+        tr
+          td 123456789124
+          td 商品名B
+          td
+            select.form-select
+              option 通常
+              option 寄贈
+              option 景品
+              option 特別割引
+          td 15
+          td 720
+          td 3
+  .d-flex.justify-content-center
+    h4.d-inline-flex.me-3 仕入先
+    p.d-inline-flex.mt-1 ヤマダ酒蔵株式会社
+  .d-flex.justify-content-end
+    .col-auto
+      button.btn.btn-primary(type="button", onclick="location.href='receiving_history.html'") 確認完了

@@ -1,0 +1,45 @@
+extends _layout
+
+block append config
+  - var page = "receiving management"
+
+block append head
+
+block content
+  p.text-end 担当者：A
+  h1.mb-4 入荷履歴
+  form.mb-4
+    .row.align-items-center.g-3
+      .col-auto
+        input.form-control(type="search", placeholder="仕入先絞り込み")
+      .col-auto
+        p.mt-3 期間指定
+      .col-auto
+        input.form-control(type="date")
+      .col-auto
+        p.mt-3 ～
+      .col-auto
+        input.form-control(type="date")
+  .table-responsive
+    table.table
+      tbody
+        tr
+          td 2022/6/1
+          td ヤマダ酒蔵株式会社
+          td 担当者A
+          td
+            button.btn.btn-primary(type="button", onclick="location.href='shipment_details.html'") 詳細
+        - for (var i = 0; i < 19; i++)
+          tr
+            td 2022/6/1
+            td ヤマダ酒蔵株式会社
+            td 担当者A
+            td
+              button.btn.btn-primary(type="button") 詳細
+  nav(aria-label="Page navigation")
+    ul.pagination.justify-content-center
+      li.page-item.disabled: a.page-link(href="#") 前へ
+      li.page-item.active: a.page-link(href="#") 1
+      li.page-item: a.page-link(href="#") 2
+      li.page-item: a.page-link(href="#") 3
+      li.page-item: a.page-link(href="#") 次へ

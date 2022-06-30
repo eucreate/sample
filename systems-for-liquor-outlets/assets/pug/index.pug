@@ -1,0 +1,20 @@
+include _config
+
+doctype html
+html(lang="ja")
+  head
+    include _head
+body
+  .position-relative.min-vw-100.min-vh-100
+    form.card.text-center.min-w-300px.position-absolute.top-50.start-50.translate-middle(action="index2.html")
+      h2.card-header サインイン
+      .card-body
+        p.card-text
+          input.form-control(type="text", require, placeholder="テナントID")
+        p.card-text
+          input.form-control(type="email", require, placeholder="メールアドレス")
+        p.card-text
+          input.form-control(type="password", require, placeholder="パスワード")
+        p.card-text
+          button.btn.btn-primary(type="submit") サインイン
+        p.card-text: a(href="./login.html") パスワードを忘れた場合はこちらまで

@@ -1,0 +1,11 @@
+extends _layout
+
+block append config
+  - var page = "home"
+
+block append head
+
+block content
+  p.h3 お知らせ
+  p 06/25の売上速報：516,258円（現金：65,465円　売掛：495,793円）
+  p.alert.alert-info: a(href="billing_management.html") 未回収金があります(1)
